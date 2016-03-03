@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  users_id: 
+  mouvement: 1
+  trajet_id: 
+  last_ping: 2016-03-03 09:35:41
+  prix: 1
+  last_address: MyText
+  final_address: MyText
+  start_address: MyText
+  final_address_coord: MyText
+  start_address_coord: MyText
+  start_relai_addr: MyText
+  final_relai_addr: MyText
+  start_relai_coord: MyText
+  final_relai_coord: MyText
+  depot_date: 2016-03-03 09:35:41
+  retrait_date: 2016-03-03 09:35:41
+
+two:
+  users_id: 
+  mouvement: 1
+  trajet_id: 
+  last_ping: 2016-03-03 09:35:41
+  prix: 1
+  last_address: MyText
+  final_address: MyText
+  start_address: MyText
+  final_address_coord: MyText
+  start_address_coord: MyText
+  start_relai_addr: MyText
+  final_relai_addr: MyText
+  start_relai_coord: MyText
+  final_relai_coord: MyText
+  depot_date: 2016-03-03 09:35:41
+  retrait_date: 2016-03-03 09:35:41

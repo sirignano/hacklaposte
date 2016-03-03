@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'home/nouveau_trajet'
 
   get 'home/mes_trajets'
-
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  #devise_for :users
 
   root 'home#acceuil'
   get '/' => 'home#acceuil'

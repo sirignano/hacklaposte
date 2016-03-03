@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160303131525) do
+ActiveRecord::Schema.define(version: 20160303144120) do
+
+  create_table "trajets", force: :cascade do |t|
+    t.integer  "free_space"
+    t.text     "start_addr"
+    t.text     "start_coord"
+    t.text     "final_addr"
+    t.text     "final_coord"
+    t.integer  "max_offset"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,5 +45,26 @@ ActiveRecord::Schema.define(version: 20160303131525) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "valises", force: :cascade do |t|
+    t.integer  "users_id_id"
+    t.integer  "trajet_id_id"
+    t.integer  "mouvement"
+    t.integer  "prix"
+    t.text     "last_address"
+    t.text     "final_address"
+    t.text     "start_address"
+    t.text     "final_address_coord"
+    t.text     "start_address_coord"
+    t.text     "start_relai_addr"
+    t.text     "final_relai_addr"
+    t.text     "start_relai_coord"
+    t.text     "final_relai_coord"
+    t.datetime "last_ping"
+    t.datetime "depot_date"
+    t.datetime "retrait_date"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
 end
