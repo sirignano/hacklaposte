@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'home/acceuil'
+
+  get 'home/nouveau_trajet'
+
+  get 'home/mes_trajets'
+
+  devise_for :users
+
+  root 'home#acceuil'
+  get '/' => 'home#acceuil'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
