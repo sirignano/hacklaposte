@@ -1,2 +1,51 @@
-<h1>Home#acceuil</h1>
-<p>Find me in app/views/home/acceuil.html.erb</p>
+<%= bootstrap_form_tag url: '/new' do |f| %>
+
+
+
+<div class="form-inputs" ng-app="mapsApp" ng-controller="MapCtrl">
+	<div class="form-group">
+		<label class="control-label" for="depart_addr">
+			Addresse de départ
+		</label>
+		<input required="required" class="form-control" name="depart_addr" id="depart_addr" type="text" ng-model="departAddr">
+	</div>
+	<a href="#" ng-click="getCities('map', 0)">trouver un point relai</a>
+	<div id="map"></div>
+	<div id="class" ng-repeat="marker in markers[0] | orderBy : 'title'">
+		<div class="radio">
+			<label for="_depart_relai_requiredtrue">
+				<input ng-click="openInfoWindow($event, marker)" type="radio" value="{:required=>true}" name="[depart_relai]" id="_depart_relai_requiredtrue">
+			{{marker.title}}
+			</label>
+		</div>
+	</div>
+
+
+        <div class="form-group">
+                <label class="control-label" for="final_addr">
+                        Addresse de déstination
+                </label>
+                <input required="required" class="form-control" name="final_addr" id="final_addr" type="text" ng-model="finalAddr">
+        </div>
+        <a href="#" ng-click="getCities('map2', 1)">trouver un point relai</a>
+        <div id="map2"></div>
+        <div id="class" ng-repeat="marker in markers[1] | orderBy : 'title'">
+                <div class="radio">
+                        <label for="_final_relai_requiredtrue">
+                                <input ng-click="openInfoWindow($event, marker)" type="radio" value="{:required=>true}" name="[final_relai]" id="_final_relai_requiredtrue">
+                        {{marker.title}}
+                        </label>
+                </div>
+        </div>
+</div>
+
+	<%= f.datetime_select :date, required: true %>
+	<%= f.number_field :poid, required: true %>
+	<%= f.number_field :volume, required: true %>
+	//foreach resultat api camion
+	<%= f.radio_button :trajet, required: true %>
+
+	<div class="form-actions">
+		<%= f.submit "Payer et confirmer" %>
+	</div>
+<% end %>
