@@ -1,4 +1,20 @@
-<%= bootstrap_form_tag url: '/new' do |f| %>
+
+
+
+
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+    <li><a href="#profile" data-toggle="tab">Nouveau</a></li>
+    <li><a href="#messages" data-toggle="tab">Anciens</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+	<div id="home" class="tab-pane active">
+		SALUT
+	</div>
+	<div id="profile" class="tab-pane">
+		<%= bootstrap_form_tag url: '/new' do |f| %>
 
 
 
@@ -49,3 +65,16 @@
 		<%= f.submit "Payer et confirmer" %>
 	</div>
 <% end %>
+	</div>
+	<div id="messages" class="tab-pane">
+
+	</div>
+</div>
+
+
+<script>
+  $('#myTab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+</script>
