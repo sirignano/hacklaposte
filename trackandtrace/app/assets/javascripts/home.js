@@ -41,10 +41,10 @@ angular.module('mapsApp', [])
                     arrcities[n] = [];
                     // rsp.data.records
                     var res = rsp.data.records;
-                    for (id in res) {
-                        console.log(res[id]);
-                        arthur = res[id];
-                        arrcities[n].push({city: res[id].fields.libelle_du_site, desc: res[id].fields.adresse + " "  + res[id].fields.code_postal + ", "  + res[id].fields.localite, lat: res[id].fields.latitude, long: res[id].fields.longitude});
+                    for (var ids in res) {
+                        console.log(res[ids]);
+                        arthur = res[ids];
+                        arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
                     }
                 gmap(id, n);                    
                 }, function() {});
