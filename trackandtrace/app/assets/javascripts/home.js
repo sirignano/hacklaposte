@@ -40,9 +40,9 @@ angular.module('mapsApp', [])
                 {
                     arrcities[n] = [];
                     // rsp.data.records
-                        console.log("https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=" + latitude + "," + longitude + ",10000");
-                        console.log(rsp.data);
                     for (record in rsp.data.records) {
+                        console.log(record);
+                        arthur = record;
                         arrcities[n].push({city: record.fields.libelle_du_site, desc: record.fields.adresse + " "  + record.fields.code_postal + ", "  + record.fields.localite, lat: record.fields.latitude, long: record.fields.longitude});
                     }
                 }, function() {});
