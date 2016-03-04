@@ -87,12 +87,12 @@ angular.module('mapsApp', [])
 	{
 		var array = [];
 		    var mapOptions = {
-		        zoom: 8,
+		        zoom: 12,
 		        center: new google.maps.LatLng(latitude, longitude),
 		    }
 			array.push(mapOptions);
 		    var mapOptions1 = {
-		        zoom: 8,
+		        zoom: 12,
 		        center: new google.maps.LatLng(latitude2, longitude2),
 		    }
 			array.push(mapOptions1);
