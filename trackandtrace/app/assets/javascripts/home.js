@@ -36,7 +36,7 @@ angular.module('mapsApp', [])
                 longitude = response.data.features[0].geometry.coordinates[0];
                 latitude = response.data.features[0].geometry.coordinates[1];
                 //https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=48.8520930694,2.34738897685,500
-                $http.get("https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=" + latitude + "," + longitude + ",10000").then(function(rsp)
+                $http.get("https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=" + latitude + "," + longitude + ",5000").then(function(rsp)
                 {
                     arrcities[n] = [];
                     // rsp.data.records
