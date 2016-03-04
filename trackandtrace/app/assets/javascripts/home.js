@@ -46,18 +46,10 @@ angular.module('mapsApp', [])
                         arthur = res[ids];
                         arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
                     }
-                gmap(id, n);                    
+                    gmap(id, n);                    
+    
                 }, function() {});
-                                                                                            // var i = 0;
-                                                                                            // var j = Math.floor((Math.random() * 8) + 3);
-                                                                                            // arrcities[n] = [];
-                                                                                            // while (i < j)
-                                                                                            // {
-                                                                                            //     var x = Math.floor((Math.random() * 9) + 1) / 100;
-                                                                                            //     var y = Math.floor((Math.random() * 9) + 1) / 100;
-                                                                                            //     arrcities[n].push({city: randString(Math.floor((Math.random() * 10) + 5)), desc: "", lat: latitude + x, long: longitude + y});
-                                                                                            //     i += 1;
-                                                                                            // }
+
             }, function() {});
         }
 
