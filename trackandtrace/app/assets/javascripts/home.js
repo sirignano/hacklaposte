@@ -46,6 +46,7 @@ angular.module('mapsApp', [])
                         arthur = res[id];
                         arrcities[n].push({city: res[id].fields.libelle_du_site, desc: res[id].fields.adresse + " "  + res[id].fields.code_postal + ", "  + res[id].fields.localite, lat: res[id].fields.latitude, long: res[id].fields.longitude});
                     }
+                gmap(id, n);                    
                 }, function() {});
                                                                                             // var i = 0;
                                                                                             // var j = Math.floor((Math.random() * 8) + 3);
@@ -57,7 +58,6 @@ angular.module('mapsApp', [])
                                                                                             //     arrcities[n].push({city: randString(Math.floor((Math.random() * 10) + 5)), desc: "", lat: latitude + x, long: longitude + y});
                                                                                             //     i += 1;
                                                                                             // }
-		gmap(id, n);
             }, function() {});
         }
 
