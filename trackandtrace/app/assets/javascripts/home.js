@@ -120,7 +120,7 @@ angular.module('mapsApp', [])
         for (i = 0; i < arrcities[n].length; i++){
             createMarker(arrcities[n][i]);
         }
-        document.getElementById(n).style.display = "block";
+        document.getElementById(id).style.display = "block";
 	}
     $scope.openInfoWindow = function(e, selectedMarker){
         google.maps.event.trigger(selectedMarker, 'click');
