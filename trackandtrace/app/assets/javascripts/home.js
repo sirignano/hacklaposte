@@ -35,16 +35,24 @@ angular.module('mapsApp', [])
 
                 longitude = response.data.features[0].geometry.coordinates[0];
                 latitude = response.data.features[0].geometry.coordinates[1];
-                                                                                            var i = 0;
-                                                                                            var j = Math.floor((Math.random() * 8) + 3);
-                                                                                            arrcities[n] = [];
-                                                                                            while (i < j)
-                                                                                            {
-                                                                                                var x = Math.floor((Math.random() * 9) + 1) / 100;
-                                                                                                var y = Math.floor((Math.random() * 9) + 1) / 100;
-                                                                                                arrcities[n].push({city: randString(Math.floor((Math.random() * 10) + 5)), desc: "", lat: latitude + x, long: longitude + y});
-                                                                                                i += 1;
-                                                                                            }
+                //https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=48.8520930694,2.34738897685,500
+                $http.get("https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=" + longitude + "," + latitude + ",1000").then(function(rsp)
+                {
+                    rsp.data.records
+                    for each (record in rsp.data.records) {
+                        arrcities[n].push({city: record.fields.libelle_du_site, desc: record.fields.adresse + " "  + record.fields.code_postal + ", "  + record.fields.localite, lat: record.fields.latitude, long: record.fields.longitude});
+                    }
+                }, function() {});
+                                                                                            // var i = 0;
+                                                                                            // var j = Math.floor((Math.random() * 8) + 3);
+                                                                                            // arrcities[n] = [];
+                                                                                            // while (i < j)
+                                                                                            // {
+                                                                                            //     var x = Math.floor((Math.random() * 9) + 1) / 100;
+                                                                                            //     var y = Math.floor((Math.random() * 9) + 1) / 100;
+                                                                                            //     arrcities[n].push({city: randString(Math.floor((Math.random() * 10) + 5)), desc: "", lat: latitude + x, long: longitude + y});
+                                                                                            //     i += 1;
+                                                                                            // }
 		gmap(id, n);
             }, function() {});
         }
