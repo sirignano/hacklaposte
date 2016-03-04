@@ -40,10 +40,11 @@ angular.module('mapsApp', [])
                 {
                     arrcities[n] = [];
                     // rsp.data.records
-                    for (record in rsp.data.records) {
-                        console.log(record);
-                        arthur = record;
-                        arrcities[n].push({city: record.fields.libelle_du_site, desc: record.fields.adresse + " "  + record.fields.code_postal + ", "  + record.fields.localite, lat: record.fields.latitude, long: record.fields.longitude});
+                    var res = rsp.data.records;
+                    for (id in res) {
+                        console.log(res[id]);
+                        arthur = res[id];
+                        arrcities[n].push({city: res[id].fields.libelle_du_site, desc: res[id].fields.adresse + " "  + res[id].fields.code_postal + ", "  + res[id].fields.localite, lat: res[id].fields.latitude, long: res[id].fields.longitude});
                     }
                 }, function() {});
                                                                                             // var i = 0;
