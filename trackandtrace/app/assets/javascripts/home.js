@@ -93,33 +93,34 @@ angular.module('mapsApp', [])
 		    }
 			array.push(mapOptions1);
 
-    $scope.map[n] = new google.maps.Map(document.getElementById(id), array[n]);
+        $scope.map[n] = new google.maps.Map(document.getElementById(id), array[n]);
 
-    $scope.markers[n] = [];
+        $scope.markers[n] = [];
 
-    var infoWindow = new google.maps.InfoWindow();
+        var infoWindow = new google.maps.InfoWindow();
 
-    var createMarker = function (info){
+        var createMarker = function (info){
 
-        var marker = new google.maps.Marker({
-            map: $scope.map[n],
-            position: new google.maps.LatLng(info.lat, info.long),
-            title: info.city
-        });
-        marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
+            var marker = new google.maps.Marker({
+                map: $scope.map[n],
+                position: new google.maps.LatLng(info.lat, info.long),
+                title: info.city
+            });
+            marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
-        google.maps.event.addListener(marker, 'click', function(){
-            infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-            infoWindow.open($scope.map[n], marker);
-        });
+            google.maps.event.addListener(marker, 'click', function(){
+                infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+                infoWindow.open($scope.map[n], marker);
+            });
 
-        $scope.markers[n].push(marker);
+            $scope.markers[n].push(marker);
 
-    }
+        }
 
-    for (i = 0; i < arrcities[n].length; i++){
-        createMarker(arrcities[n][i]);
-    }
+        for (i = 0; i < arrcities[n].length; i++){
+            createMarker(arrcities[n][i]);
+        }
+        document.getElementById(n).style.display = "block";
 	}
     $scope.openInfoWindow = function(e, selectedMarker){
         google.maps.event.trigger(selectedMarker, 'click');
