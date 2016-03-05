@@ -4,7 +4,7 @@
 
 var HomeView = Marionette.ItemView.extend({
 		//el: '#tweet-container',
-		template: '../../../templates/home.hbs'
+		template: require('../../../templates/home.hbs')
 	});
 
 module.exports = HomeView;
