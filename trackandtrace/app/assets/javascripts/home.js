@@ -48,7 +48,7 @@ angular.module('mapsApp', [])
                         dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
                         arrcities[n].push({id: res[ids].fields.libelle_du_site.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
                     }
-                    arrcities.sort(function(a, b) {
+                    arrcities[n].sort(function(a, b) {
                         return a.dist - b.dist;
                     });
                     gmap(id, n);
@@ -81,7 +81,7 @@ angular.module('mapsApp', [])
                         dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
                         arrcities[n].push({id: res[ids].fields.libelle_du_site.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
                     }
-                    arrcities.sort(function(a, b) {
+                    arrcities[n].sort(function(a, b) {
                         return a.dist - b.dist;
                     });
                     gmap(id, n);
