@@ -43,11 +43,10 @@ angular.module('mapsApp', [])
                     var res = rsp.data.records;
                     for (var ids in res) {
                         // console.log(res[ids]);
-                        arthur = res[ids];
                         arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
                     }
                     gmap(id, n);
-                    $('#id' + n).show();                  
+                    $('#val' + n).show();         
     
                 }, function() {});
 
@@ -73,7 +72,8 @@ angular.module('mapsApp', [])
                         arthur = res[ids];
                         arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
                     }
-                    gmap(id, n);                    
+                    gmap(id, n);
+                    $('#val' + n).show();
     
                 }, function() {});
 
