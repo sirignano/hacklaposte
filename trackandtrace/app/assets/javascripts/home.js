@@ -43,8 +43,14 @@ angular.module('mapsApp', [])
                     var res = rsp.data.records;
                     for (var ids in res) {
                         // console.log(res[ids]);
-                        arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
+                        tmp1 = res[ids].fields.latitude - latitude2;
+                        tmp2 = res[ids].fields.longitude - longitude2;
+                        dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
+                        arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
                     }
+                    arrcities.sort(function(a, b) {
+                        return a.dist - b.dist;
+                    });
                     gmap(id, n);
                     $('#val' + n).show();         
     
@@ -69,9 +75,15 @@ angular.module('mapsApp', [])
                     var res = rsp.data.records;
                     for (var ids in res) {
                         // console.log(res[ids]);
-                        arthur = res[ids];
-                        arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
+                        // arthur = res[ids];
+                        tmp1 = res[ids].fields.latitude - latitude2;
+                        tmp2 = res[ids].fields.longitude - longitude2;
+                        dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
+                        arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
                     }
+                    arrcities.sort(function(a, b) {
+                        return a.dist - b.dist;
+                    });
                     gmap(id, n);
                     $('#val' + n).show();
     
