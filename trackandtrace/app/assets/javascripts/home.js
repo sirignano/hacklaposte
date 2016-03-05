@@ -48,8 +48,12 @@ angular.module('mapsApp', [])
                         tmp1 = res[ids].fields.latitude - latitude;
                         tmp2 = res[ids].fields.longitude - longitude;
                         dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
-                        arrcities[n].push({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
+                        arrcities[n].push({id: res[ids].fields.libelle_du_site.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
                     }
+                    arrcities[n].sort(function(a, b) {
+                        console.log(a);
+                        return a.dist - b.dist;
+                    });
                     gmap(id, n);
                     $('#val' + n).show();         
     
@@ -78,8 +82,11 @@ angular.module('mapsApp', [])
                         tmp1 = res[ids].fields.latitude - latitude2;
                         tmp2 = res[ids].fields.longitude - longitude2;
                         dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
-                        arrcities[n].push({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
+                        arrcities[n].push({id: res[ids].fields.libelle_du_site.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
                     }
+                    arrcities[n].sort(function(a, b) {
+                        return a.dist - b.dist;
+                    });
                     gmap(id, n);
                     $('#val' + n).show();
     
