@@ -42,7 +42,7 @@ angular.module('mapsApp', [])
                     // rsp.data.records
                     var res = rsp.data.records;
                     for (var ids in res) {
-                        console.log(res[ids]);
+                        // console.log(res[ids]);
                         arthur = res[ids];
                         arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
                     }
@@ -68,7 +68,7 @@ angular.module('mapsApp', [])
                     // rsp.data.records
                     var res = rsp.data.records;
                     for (var ids in res) {
-                        console.log(res[ids]);
+                        // console.log(res[ids]);
                         arthur = res[ids];
                         arrcities[n].push({city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude});
                     }
