@@ -40,7 +40,7 @@
 									</div>
 									<a href="#" class="btn btn-login btn-primary btn-float"  onclick="$('#form1').hide();$('#form2').show();">Valider</a>
 								</div>
-								<div id="form2">
+								<div id="form2" style="display:none">
 									<div class="form-group">
 										<label class="control-label" for="final_addr">
 											Addresse de déstination
@@ -60,7 +60,7 @@
 									<a href="#" class="btn btn-login btn-primary btn-float"  onclick="$('#form2').hide();$('#form3').show();">Valider</a>
 								</div>
 							</div>
-							<div id="form3">	
+							<div id="form3"  style="display:none">	
 								<%= f.datetime_select :date, required: true %>
 								<%= f.number_field :poid, required: true %>
 								<%= f.number_field :volume, required: true %>
