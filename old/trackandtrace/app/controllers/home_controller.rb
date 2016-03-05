@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 	if params[:id].to_i.to_s == params[:id]
 		a = Valise.where("numero_de_suivi == #{params[:id]}")
 		if a.empty?
-			render :text => "{err}"
+			render :text => "{err}" and return
 		else
 			str = "{"
 			b = a.first
@@ -32,10 +32,10 @@ class HomeController < ApplicationController
 			elsif b.state == 4
 				str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"}}'
 			end
-			render :text => str
+			render :text => str and return
 		end
 
 	end
-	render :text => "{err}"
+	render :text => "{err}" and return
   end
 end
