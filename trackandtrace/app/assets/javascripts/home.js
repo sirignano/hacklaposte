@@ -51,6 +51,7 @@ angular.module('mapsApp', [])
                         arrcities[n].push({id: res[ids].fields.libelle_du_site.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
                     }
                     arrcities[n].sort(function(a, b) {
+                        console.log(a);
                         return a.dist - b.dist;
                     });
                     gmap(id, n);
