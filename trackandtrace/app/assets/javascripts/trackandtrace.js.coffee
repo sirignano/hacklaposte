@@ -3,7 +3,5 @@ window.Trackandtrace =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: -> alert 'Hello from Benoit!'
 
-$(document).ready ->
-  Trackandtrace.initialize()
