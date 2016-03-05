@@ -21,13 +21,19 @@
 //= require backbone
 //= require trackandtrace
 //= require backbone.marionette
+//= require handlebars.runtime
 //= require handlebars
-//= require_tree ../../templates
+//= require react
+//= require react_ujs
+//= require components
+//= require underscore
+//= require backbone
+//= require trackandtrace
+//= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-//= require_tree .
 
 
 'use strict'

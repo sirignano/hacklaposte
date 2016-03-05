@@ -466,3 +466,4 @@ ls
 cd app/
 node server.js 
 npm install passport
+ls
