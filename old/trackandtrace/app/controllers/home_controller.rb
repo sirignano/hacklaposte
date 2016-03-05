@@ -22,15 +22,15 @@ class HomeController < ApplicationController
 			str = "{"
 			b = a.first
 			if b.state == 0
-				str += "{true},{false},{false},{false},{false}}"
+				str += '{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}}'
 			elsif b.state == 1
-				str += "{true},{true},{false},{false},{false}}"
+				str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}}'
 			elsif b.state == 2
-				str += "{true},{true},{true},{false},{false}}"
+				str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}}'
 			elsif b.state == 3
-				str += "{true},{true},{true},{true},{false}}"
+				str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"}}'
 			elsif b.state == 4
-				str += "{true},{true},{true},{true},{true}}"
+				str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"}}'
 			end
 			render :text => str
 		end
