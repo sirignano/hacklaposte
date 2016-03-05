@@ -1,7 +1,7 @@
 'use strict'
 
 //TEMPLATE
-var tpl = require('/public/templates/root-layout.hbs');
+var tpl = require('../../../templates/root-layout.hbs');
 
 var RootLayout = Marionette.LayoutView.extend({
 		el: '#root-container',
