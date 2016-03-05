@@ -1,11 +1,10 @@
 'use strict'
 
 //TEMPLATE
-var tpl = require('../../../templates/root-layout.hbs');
 
 var RootLayout = Marionette.LayoutView.extend({
 		el: '#root-container',
-		template: tpl,
+		template: '../../../templates/root-layout.hbs',
 		regions: {
 			app: '#app'
 		}
