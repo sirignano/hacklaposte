@@ -17,7 +17,7 @@ class CreateValises < ActiveRecord::Migration
       t.text :final_relai_addr
       t.text :first_relai_coord
       t.text :final_relai_coord
-      t.integer :numero_de_suivi
+      t.text :numero_de_suivi
       t.datetime :last_ping
       t.datetime :depot_date
       t.datetime :retrait_date
