@@ -16,9 +16,6 @@ class HomeController < ApplicationController
   def suivi
   		begin
 			a = Valise.where("numero_de_suivi == #{params[:id]}")
-		rescue
-			render :text => "{err3}" and return
-		end
 		if a.empty?
 			render :text => "{err1}" and return
 		else
@@ -36,6 +33,9 @@ class HomeController < ApplicationController
 				str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"}}'
 			end
 			render :text => str and return
+		end
+		rescue
+			render :text => "{err3}" and return
 		end
 
 	render :text => "{err2}" and return
