@@ -21,9 +21,7 @@
 //= require backbone
 //= require trackandtrace
 //= require backbone.marionette
-//= require react
-//= require react_ujs
-//= require components
+//= require handlebars
 //= require_tree ../../templates
 //= require_tree ./models
 //= require_tree ./collections
