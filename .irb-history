@@ -1,0 +1,37 @@
+a = new Valise()
+a = new Valises()
+a = new Valises
+a = new Valise
+a.user_id_id = 0
+a.user_id_id
+clear
+a = Valise.find(1)
+a.delete
+a.state = 0
+a.numero_de_suivi = 1
+b = Valise.new
+a.numero_de_suivi = 2
+a.numero_de_suivi = 3
+a.sate = 2
+a.first
+a.all
+a
+a = Valise.where("numero_de_suivi == 1E00154364317)
+a = Valise.where("numero_de_suivi == "1E00154364317")
+a.numero_de_suivi = "1E00154364317"
+b = a.first.numero_de_suivi
+Valise.where(numero_de_suivi == b)
+Valise.where(d=> d.numero_de_suivi == b)
+a.state = 2
+a.numero_de_suivi
+a.numero_de_suivi = "lol"
+b = Valise.where("numero_de_suivi == lol")
+a = Valise.all
+
+a = Valise.new
+a.state = 1
+a.numero_de_suivi = der :text => "{err1}" and return
+a.numero_de_suivi = d"6A08223127191"
+a.numero_de_suivi = d6A08223127191"
+a.numero_de_suivi = "6A08223127191"
+a.save
