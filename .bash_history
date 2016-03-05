@@ -435,3 +435,34 @@ mysql -u root -p
 ifconfig
 mysql -u root -p
 ifconfig
+ls
+ls
+ls && ls
+cd app/
+ls
+ps ax
+kill -9 15807
+node server.js 
+ls
+ls
+cd ..
+mkdir old
+mv trackandtrace* old/
+ls
+./push.sh 
+ls
+cd aa
+cd app/
+ls
+ls
+ls
+pwd
+ls
+find .
+ls
+ls
+cd ..
+ls
+cd app/
+node server.js 
+npm install passport

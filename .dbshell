@@ -1,0 +1,23 @@
+use users
+db
+show dbs
+db.users.insert({email:"arthur.chazal@gmail.com", encrypted_password:"test", firstname:'Arthur', lastname:'Chazal', money:42, address:'41 rue Jussieu'})
+;
+dbs
+db
+db.users.find()
+db
+use test
+dbs
+db
+show test;
+drop test
+drop test;
+use objects;
+dbs
+db
+who dbs
+use objects
+db
+show dbs
+use objects
