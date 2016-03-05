@@ -11,7 +11,7 @@ latitude2 = 0;
 longitude2 = 0;
 
 
-Trackandtrace.initialize();
+// Trackandtrace.initialize();
 angular.module('mapsApp', [])
 .controller('MapCtrl', function ($scope, $http) {
     var apiAddr = "http://api-adresse.data.gouv.fr/search/?q=";

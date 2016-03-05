@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   #devise_for :users
 
-  root 'home#acceuil'
-  get '/' => 'home#acceuil'
+  root 'home#nouveau_trajet'
+  get '/' => 'home#nouveau_trajet'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
