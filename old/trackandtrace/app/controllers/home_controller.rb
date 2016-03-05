@@ -36,5 +36,6 @@ class HomeController < ApplicationController
 		end
 
 	end
+	render :text => "{err}"
   end
 end
