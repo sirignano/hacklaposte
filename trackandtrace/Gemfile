@@ -21,7 +21,7 @@ gem 'devise'
 gem 'carrierwave'
 
 # angular
-
+gem 'material_icons'
 gem 'angularjs-rails'
 
 # Geolocation
