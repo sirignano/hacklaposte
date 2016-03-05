@@ -8,6 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q!
 :w
 :wq
 :q
@@ -45,18 +46,20 @@
 		
 
 # File marks:
-'0  41  1  ~/app/server.js
-'1  3  1  ~/app/app/js/app.js
-'2  67  12  ~/app/app/index.html
-'3  131  8  ~/app/app/index.html
-'4  61  0  ~/app/app/index.html
-'5  1  0  ~/trackandtrace/Gemfile
-'6  1  0  Gemfile/
-'7  36  0  ~/app/server.js
-'8  1  0  ~/app/server.js
-'9  7  12  ~/.vimrc
+'0  128  0  /etc/mysql/my.cnf
+'1  41  1  ~/app/server.js
+'2  3  1  ~/app/app/js/app.js
+'3  67  12  ~/app/app/index.html
+'4  131  8  ~/app/app/index.html
+'5  61  0  ~/app/app/index.html
+'6  1  0  ~/trackandtrace/Gemfile
+'7  1  0  Gemfile/
+'8  36  0  ~/app/server.js
+'9  1  0  ~/app/server.js
 
 # Jumplist (newest first):
+-'  128  0  /etc/mysql/my.cnf
+-'  1  0  /etc/mysql/my.cnf
 -'  41  1  ~/app/server.js
 -'  1  0  ~/app/server.js
 -'  3  1  ~/app/app/js/app.js
@@ -154,9 +157,11 @@
 -'  1  0  ~/app/app/index.html
 -'  131  8  ~/app/app/index.html
 -'  73  8  ~/app/app/index.html
--'  74  8  ~/app/app/index.html
 
 # History of marks within files (newest to oldest):
+
+> /etc/mysql/my.cnf
+	"	128	0
 
 > ~/app/server.js
 	"	41	1

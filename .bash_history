@@ -378,3 +378,60 @@ cd ..
 ls
 ls app/
 ls
+ls
+cd trackandtrace
+nano Gemfile
+bundle install --without=production
+rails generate backbone:install
+ps ax
+kill -9 13400
+rails s -p 80 -b 198.211.105.132 -d
+git add -A
+git commit -m "o"
+git push origin master
+grep -rin "hello from backbone"
+grep -rin "hello from backbone" .
+git add -A 
+git commit -m "backbone test"
+cd ..
+./pull.sh 
+cd trackandtrace
+nano Gemfile
+bundle install --without=production
+nano app/assets/javascripts/application.js 
+ps ax
+kill -9 15451
+rails s -p 80 -b 198.211.105.132 -d
+cd trackandtrace
+ls
+git pull
+git pull origin master
+nano ./app/assets/javascripts/home.js 
+git pull
+git pull origin master
+git pull origin master
+git pull origin master
+git pull origin master
+git pull origin master
+git pull origin master
+git pull origin master
+git pull origin master
+ls
+mysql
+mkdir database
+cd database/
+apt-get install mysql-server mysql-client libmysqlclient15-dev mysql-common
+vi /etc/mysql/my.cnf
+mysql GroomAddict
+mysql root
+$ mysqld --skip-grant-tables
+mysql -u root mysql
+mysql -skip-grant-tables
+mysql
+apt-get install mysql-server
+mysql -u root -p
+mysql -u root -p
+mysql -u root -p
+ifconfig
+mysql -u root -p
+ifconfig
