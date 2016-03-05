@@ -19,8 +19,61 @@
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
-h2 {
-    margin-bottom:0;
-    margin-top: 0;
+body {
+	padding-top: 25px;
+	font-family: sans-serif;
 }
 
+.navbar{
+	margin:	0 !important;
+}
+
+.container{
+	padding:0 !important;
+	margin:0 !important;
+}
+
+.starter-template {
+	padding: 40px 15px;
+  text-align: center;
+}
+
+.home-container{
+	background-image: url(../images/bg-home.jpg);
+	background-position: center;
+	padding:0;
+	height: calc(100vh - 25px);
+}
+
+.btn-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 30vh;
+	margin-left: 15vw;
+	height:35vh;
+	width: 60vw;
+}
+
+.btn-line1{
+	height: 20vh;
+}
+
+.btn-line2{
+	display: inline-flex;
+	height: 15vh;
+}
+
+.round-btn{
+	display: inline-block;
+	width: 12.5vh;
+	height: 12.5vh;
+	border-radius: 50%;
+	background-color: black;
+	margin-top: 2.5vh;
+	vertical-align:middle;	
+}
+
+.btn-check{
+	margin-left: 7vw;
+}
