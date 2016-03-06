@@ -72,8 +72,7 @@ var OrderView = Marionette.ItemView.extend({
 			    this.toCoord.latitude = latitude;
 			    this.string = 'Retirer mon colis ici !';
 			  }
-			  else
-			  	this.string = '';
+			  console.log(this.string);
 			  var mapDiv = document.getElementById('map');
 			  this.map = new google.maps.Map(mapDiv, {
 			    center: {lat: latitude, lng: longitude},
