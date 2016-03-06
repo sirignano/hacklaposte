@@ -8,7 +8,7 @@ var HomeView = Marionette.ItemView.extend({
 		//el: '#tweet-container',
 		template: tpl,
 		initialize:	function () { 
-			$('#map').hide();
+			// $('#map').hide();
 		}
 
 	});
