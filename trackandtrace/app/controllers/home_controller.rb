@@ -13,7 +13,7 @@ class HomeController < ApplicationController
 			if a.empty?
 				render :text => "{err not found}" and return
 			else
-				b = a.first
+				b = a.last
 				render :text => "[{
 				'start_addr': '"+b.start_addr+"',
 				'final_addr': '"+b.final_addr+"',
@@ -68,17 +68,17 @@ class HomeController < ApplicationController
 				render :text => "{err not found}" and return
 			else
 				str = "["
-				b = a.first
+				b = a.last
 				if b.state == 0
-					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "", "desc": "En cours d\'acheminement", "step": "2"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+' =)", "step": "4"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "", "desc": "En cours d\'acheminement", "step": "2"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+'", "step": "4"}]'
 				elsif b.state == 1
-					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "", "desc": "En cours d\'acheminement", "step": "2"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+' =)", "step": "4"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "", "desc": "En cours d\'acheminement", "step": "2"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+'", "step": "4"}]'
 				elsif b.state == 2
-					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "true", "desc": "En cours d\'acheminement", "step": "2"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+' =)", "step": "4"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "true", "desc": "En cours d\'acheminement", "step": "2"},{"status": "", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+'", "step": "4"}]'
 				elsif b.state == 3
-					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "true", "desc": "En cours d\'acheminement", "step": "2"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+' =)", "step": "4"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "true", "desc": "En cours d\'acheminement", "step": "2"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "", "desc": "On vous attend a : '+b.final_addr+'", "step": "4"}]'
 				elsif b.state == 4
-					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "true", "desc": "En cours d\'acheminement", "step": "2"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "true", "desc": "On vous attend a : '+b.final_addr+' =)", "step": "4"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : '+b.start_addr+'", "step": "0"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "1"},{"status": "true", "desc": "En cours d\'acheminement", "step": "2"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville", "step": "3"},{"status": "true", "desc": "On vous attend a : '+b.final_addr+'", "step": "4"}]'
 				end
 				render :text => str and return
 			end
