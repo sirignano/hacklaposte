@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   root 'home#mes_trajets'
   get '/' => 'home#mes_trajets'
-  get '/suivi/:id' => 'home#suivi'
+  get '/suivi' => 'home#suivi'
   post '/suivi' => 'home#suivi'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

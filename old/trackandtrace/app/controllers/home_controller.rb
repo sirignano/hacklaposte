@@ -37,7 +37,5 @@ class HomeController < ApplicationController
 		rescue
 			render :text => "{err3}" and return
 		end
-
-	render :text => "{err2}" and return
   end
 end
