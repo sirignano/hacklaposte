@@ -7,10 +7,10 @@ origin = '41 rue Jussieu';
 arrcities = [];
 var from_coords = {};
 var to_coords = {};
+var map;
 var infowindow;
 
 n = 0;
-var map;
 var createMarker = function (info){
 
   var marker = new google.maps.Marker({
@@ -48,6 +48,7 @@ function initMap(step) {
   infowindow = new google.maps.InfoWindow({
     content: 'tmpcontent'
   });
+  console.log(infowindow);
   xhr.open("GET", 'https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=' + latitude + ',' + longitude + ',5000', false);
   xhr.send();
   res = JSON.parse(xhr.response).records;
