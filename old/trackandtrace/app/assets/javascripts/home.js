@@ -27,6 +27,7 @@ var createMarker = function (info){
 
 }
 function initMap(origin) {
+  console.log(origin);
   var xhr = new XMLHttpRequest();
   xhr.open("GET", 'http://api-adresse.data.gouv.fr/search/?q='+origin, false);
   xhr.send();
