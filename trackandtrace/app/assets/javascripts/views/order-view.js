@@ -63,12 +63,12 @@ var OrderView = Marionette.ItemView.extend({
 			  var longitude = jsonified.features[0].geometry.coordinates[0];
 			  var latitude = jsonified.features[0].geometry.coordinates[1];
 			  if (step == 'from') {
-			    // truc = longitude;
-			    // bidule = latitude;
+			    this.fromCoord.longitude = longitude;
+			    this.fromCoord.latitude = latitude;
 			  }
 			  else if (step == 'to') {
-			    // truc = longitude;
-			    // bidule = latitude;
+			    this.toCoord.longitude = longitude;
+			    this.toCoord.latitude = latitude;
 			  }
 			  var mapDiv = document.getElementById('map');
 			  this.map = new google.maps.Map(mapDiv, {
