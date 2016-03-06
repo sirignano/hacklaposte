@@ -32,16 +32,23 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		fromRelais: function(e) {
-			console.log(e);
-			// array = 
+			var array = e.currentTarget.value.split(';', 3);
+			if (array.length != 3)
+				return ;
+			this.fromLat = array[0];
+			this.fromLng = array[1];
+			this.fromCity = array[2];
 			self = this;
 			this.infowindow.close();
 		},
 
 		toRelais: function(e) {
-			console.log(e.currentTarget);
-			console.log(e.currentTarget.value);
-			// array = 
+			var array = e.currentTarget.value.split(';', 3);
+			if (array.length != 3)
+				return ;
+			this.toLat = array[0];
+			this.toLng = array[1];
+			this.toCity = array[2];
 			self = this;
 			this.infowindow.close();
 		},
