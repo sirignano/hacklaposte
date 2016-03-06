@@ -25,9 +25,11 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		sendTo: function(e) {
+			self = this;
 			this.initMap(document.getElementById('arrivee').value, 'to');
 		},
 		sendFrom: function(e) {
+			self = this;
 			this.initMap(document.getElementById('depart').value, 'from');
 		},
 
