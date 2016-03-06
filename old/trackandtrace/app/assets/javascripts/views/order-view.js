@@ -23,10 +23,10 @@ var OrderView = Marionette.ItemView.extend({
 
 
 		sendTo: function(e) {
-			initMap($('#arrivee').value);
+			initMap(document.getElementById('arrivee').value);
 		},
 		sendFrom: function(e) {
-			initMap($('#depart').value);
+			initMap(document.getElementById('depart').value);
 		},
 
 		getResult: function(e) {
