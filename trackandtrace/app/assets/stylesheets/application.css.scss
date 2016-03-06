@@ -24,6 +24,11 @@ body {
 	font-family: sans-serif;
 }
 
+html{
+	overflow: hidden;
+	background-color: #edf0f5;
+}
+
 .navbar{
 	margin:	0 !important;
 }
@@ -103,6 +108,7 @@ body {
 /*TRACKING*/
 .composite-container{
 	padding-top: 25px;
+	background-color: #edf0f5;
 }
 
 .tracking-list{
@@ -116,21 +122,27 @@ body {
 	width: 5vh;
 	height: 5vh;
 	border-radius: 50%;
-	border: 2px solid black;
+	border: 3px solid #edf0f5;
 }
 
 .track-true{
 	background-color: green;
-  background: -webkit-radial-gradient(40px 40px, circle, white, green);
+	text-align: center;
+	color: #edf0f5;
+	line-height: 4.5vh;
+/*  background: -webkit-radial-gradient(40px 40px, circle, white, green);
   background: -moz-radial-gradient(40px 40px, circle, white, green);
-  background: radial-gradient(40px 40px, circle, white, green);		
+  background: radial-gradient(40px 40px, circle, white, green);	*/	
 }
 
-.track-false{
-	background-color: red;
-	background: -webkit-radial-gradient(40px 40px, circle, white, red);
+.track-{
+	background-color: #EC971F;
+	text-align: center;
+	color: #edf0f5;
+	line-height: 4.5vh;
+/*	background: -webkit-radial-gradient(40px 40px, circle, white, red);
   background: -moz-radial-gradient(40px 40px, circle, white, red);
-  background: radial-gradient(40px 40px, circle, white, red);	
+  background: radial-gradient(40px 40px, circle, white, red);	*/
 }
 
 .tracking-info{
@@ -145,6 +157,7 @@ body {
 	margin: auto;
 	margin-left: 20px;
 	text-overflow: ellipsis;
+	padding-right: 10px;
 }
 
 .tracking-column{
@@ -170,6 +183,7 @@ body {
 	line-height: 30px;
 	padding-left: 40px;
 	text-align: center;
+	margin-bottom: 15px;
 }
 
 .arrow-place{
@@ -178,9 +192,16 @@ body {
 	font-size: 2em;
 	color:#8080ff;
 	padding: 5px;
-	background-color: white;
+	background-color: #edf0f5;
 }
 
 .check-container{
 	padding-top: 50px;
 }
+
+/*ORDER*/
+.order{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
