@@ -22,7 +22,7 @@ var createMarker = function (info){
 
   console.log(infowindow);
   google.maps.event.addListener(marker, 'click', function(){
-      infoWindow.open(map, marker);
+      infowindow.open(map, marker);
   });
 
 }
