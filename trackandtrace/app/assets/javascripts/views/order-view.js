@@ -39,7 +39,7 @@ var OrderView = Marionette.ItemView.extend({
 			var map;
 			var infowindow;
 
-			n = 0;
+			// n = 0;
 			var createMarker = function (info){
 
 			  var marker = new google.maps.Marker({
