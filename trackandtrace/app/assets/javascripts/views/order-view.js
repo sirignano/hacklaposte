@@ -33,7 +33,7 @@ var OrderView = Marionette.ItemView.extend({
 
 		initialize: function(){
 // origin = '41 rue Jussieu';
-			arrcities = [];
+			// arrcities = [];
 			var from_coords = {};
 			var to_coords = {};
 			var map;
@@ -88,7 +88,7 @@ var OrderView = Marionette.ItemView.extend({
 			      tmp2 = res[ids].fields.longitude - longitude;
 			      dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
 			      tmp = {id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist};
-			      arrcities.push(tmp);
+			      // arrcities.push(tmp);
 			      createMarker(tmp);
 			  }
 			}
