@@ -8,7 +8,14 @@ class HomeController < ApplicationController
   def mes_trajets
   end
 
-
+  def get
+  			a = Valise.where("numero_de_suivi = ?", params[:str])
+			if a.empty?
+				render :text => "{err not found}" and return
+			else
+				render :text => b.to_json and return
+			end
+  end
   def new
   	a = Valise.new
 	a.mouvement = 0
@@ -37,7 +44,7 @@ class HomeController < ApplicationController
   def suivi
 			a = Valise.where("numero_de_suivi = ?", params[:str])
 			if a.empty?
-				render :text => "{err1}" and return
+				render :text => "{err not found}" and return
 			else
 				str = "["
 				b = a.first

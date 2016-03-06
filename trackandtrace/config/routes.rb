@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/suivi/:str' => 'home#suivi'
   post '/suivi' => 'home#suivi'
   post '/order' => 'home#new'
+  get '/order/:str' => 'home#get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
