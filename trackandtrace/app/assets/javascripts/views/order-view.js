@@ -10,23 +10,23 @@ var OrderView = Marionette.ItemView.extend({
 		ui: {
 			btnSubmit: "#btnSubmit",
 			sendfrom: "#sendfrom",
-			sendtoo: "#sendtoo"
+			sendto: "#sendto"
 
 		},
 
 		events: {
 			'click @ui.btnSubmit': 'getResult',
 			'click @ui.sendfrom': 'sendFrom',
-			'click @ui.sendtoo': 'sendTo'
+			'click @ui.sendto': 'sendTo'
 
 		},
 
 
 		sendTo: function(e) {
-			initMap($('#arrivee').value);
+			initMap(document.getElementById('arrivee').value);
 		},
 		sendFrom: function(e) {
-			initMap($('#depart').value);
+			initMap(document.getElementById('depart').value);
 		},
 
 		getResult: function(e) {
