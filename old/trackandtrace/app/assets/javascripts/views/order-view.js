@@ -8,7 +8,9 @@ var OrderView = Marionette.ItemView.extend({
 		template: tpl, 
 
 		ui: {
-			btnSubmit: "#btnSubmit"
+			btnSubmit: "#btnSubmit",
+			sendfrom: "#sendfrom",
+			sendtoo: "#sendtoo"
 
 		},
 
