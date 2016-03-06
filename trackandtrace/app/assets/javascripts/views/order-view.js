@@ -129,7 +129,7 @@ var OrderView = Marionette.ItemView.extend({
 		submitUserInfo: function(options){
 			this.model = new OrderModel({
 				startPlace: $('#depart').val(),
-				endPlace: $('#sendfrom').val(),
+				endPlace: $('#arrivee').val(),
 				endDate: $('#end-date').val(),
 				endTime: $('#end-time').val(),
 				sSize: $('#s-size').val(),
