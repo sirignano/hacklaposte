@@ -20,6 +20,7 @@ var createMarker = function (info){
   });
   marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
+  console.log(infowindow);
   google.maps.event.addListener(marker, 'click', function(){
       infoWindow.open(map, marker);
   });
