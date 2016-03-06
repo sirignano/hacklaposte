@@ -2,57 +2,57 @@
   <div class="row">
     <div class="col-xs-9">
       <div class="form-group">
-        <input type="text" class="form-control" id="depart" placeholder="Départ...">
+        <input id="start-place-field depart" type="text" class="form-control" placeholder="Départ...">
       </div>
     </div>
     <div class="col-xs-3">
       <div class="form-group">
-        <input class="btn btn-primary" type="button" id="sendfrom" value="Choisir">
+        <input id="start-place sendfrom" class="btn-choose btn btn-primary" type="button" value="Choisir">
       </div>
     </div>
-  </div><!-- /.row -->
+  </div>
   <div class="row">
     <div class="col-xs-9">
       <div class="form-group">
-        <input type="text" class="form-control" id="arrivee" placeholder="Arrivée...">
+        <input id="end-place-field arrivee" type="text" class="form-control" placeholder="Arrivée...">
       </div>
     </div>
     <div class="col-xs-3">
       <div class="form-group">
-        <input class="btn btn-primary" type="button" id="sendto" value="Choisir">
+        <input id="end-place sendto" class="btn-choose btn btn-primary" type="button" value="Choisir">
       </div>
     </div>
   </div><!-- /.row -->
   <div class="row">
     <div class="col-xs-6">
       <div class="form-group">
-        <input type="date" class="form-control" name="startDate">
+        <input id="end-date" type="date" class="form-control" name="endDate">
       </div>
     </div>
     <div class="col-xs-6">
       <div class="form-group">
-        <input type="time" class="form-control" name="startTime">
+        <input id="end-time" type="time" class="form-control" name="endTime">
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 text-center">
       <div class="form-group">
-        <input type="number" name="quantity" min="1" max="5" value="0">
+        <input id="s-size" type="number" name="quantity" min="1" max="5" value="0">
         <i class="fa fa-suitcase fa"></i>&nbsp;
-        <input type="number" name="quantity" min="1" max="5" value="0">
+        <input id="l-size" type="number" name="quantity" min="1" max="5" value="0">
         <i class="fa fa-suitcase fa-2x"></i>&nbsp;
-        <input type="number" name="quantity" min="1" max="5" value="0">
+        <input id="xl-size" type="number" name="quantity" min="1" max="5" value="0">
         <i class="fa fa-suitcase fa-3x"></i>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 text-center">
-      <div class="form-group">
-        <input class="btn btn-primary btn-lg" type="submit" value="Réserver" id="btnSubmit">
-      </div>
+      <input id="submit-btn btnSubmit" class="btn btn-primary btn-lg" type="submit" value="Réserver">
     </div>
   </div>
-</div>
+</div><!-- /.row -->
+
+
 

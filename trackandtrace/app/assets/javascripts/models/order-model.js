@@ -1,11 +1,16 @@
 'use strict'
 
 var Order = Backbone.Model.extend({
-		urlRoot: '/api/posts',
+		urlRoot: 'http://198.211.105.132:8080/order',
 		defaults: function() {
 			return  {
-				username: '',
-				body: ''
+				startPlace: "",
+				endPlace: "",
+				endDate: "",
+				endTime: "",
+				sSize: "",
+				lSize: "",
+				xlSize: ""
 			}
 		}
 	});

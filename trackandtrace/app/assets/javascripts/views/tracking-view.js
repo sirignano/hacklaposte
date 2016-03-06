@@ -8,7 +8,7 @@ var TrackingView = Marionette.ItemView.extend({
 		template: tpl,
 		templateHelpers: function(){
 	    return {
-		  	step : (typeof (this.model.get('step') != 'undefined') && this.model.get('step')!=4) ? true : false
+		  	step : (typeof (this.model.get('step') != 'undefined') && this.model.get('step')!=4) ? true : false,
 		  }
 		}
 	});

@@ -2,7 +2,13 @@
   {{#if step}}
   	<div class="tracking-column"></div>
   {{/if}}
-	<div class="tracking-bullet track-{{status}}"></div>
+	<div class="tracking-bullet track-{{status}}">
+	  {{#if status}}
+	  	<div class="glyphicon glyphicon-ok"></div>
+    {{else}}
+	  	<div class="glyphicon glyphicon-remove"></div>
+	  {{/if}}
+	</div>
 	<div class="tracking-info">
     <span class="tracking-label">{{desc}}</span>
 	</div>

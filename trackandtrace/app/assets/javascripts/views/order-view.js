@@ -2,6 +2,7 @@
 
 //TEMPLATE
 var tpl = require('../../templates/order.hbs');
+var OrderModel = require('../models/order-model.js');
 
 var OrderView = Marionette.ItemView.extend({
 		//el: '#tweet-container',
@@ -20,7 +21,10 @@ var OrderView = Marionette.ItemView.extend({
 			'click @ui.sendfrom': 'sendFrom',
 			'click @ui.sendto': 'sendTo',
 			'click @ui.fromrelais': 'fromRelais',
-			'click @ui.torelais': 'toRelais'
+			'click @ui.torelais': 'toRelais',
+			'click #start-place' : 'showStartPlace',
+			'click #end-place' : 'showEndPlace',
+			'click #submit-btn' : 'submitUserInfo'
 		},
 
 		sendTo: function(e) {
@@ -122,7 +126,28 @@ var OrderView = Marionette.ItemView.extend({
 			      var dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
 			      this.createMarker({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist}, this.string, this.id);
 			  }
-			}
+			},
+					showStartPlace: function(){
+			console.log('showStartPlace');
+		},
+
+		showEndPlace: function(){
+			console.log('showStartPlace');
+		},
+
+		submitUserInfo: function(options){
+			this.model = new OrderModel({
+				startPlace: $('#start-place-field').val(),
+				endPlace: $('#end-place-field').val(),
+				endDate: $('#end-date').val(),
+				endTime: $('#end-time').val(),
+				sSize: $('#s-size').val(),
+				lSize: $('#l-size').val(),
+				xlSize: $('#xl-size').val(),
+			});
+
+			this.model.save();
+		}
 
 
 	});
