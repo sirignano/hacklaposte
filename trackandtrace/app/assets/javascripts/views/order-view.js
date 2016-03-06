@@ -86,6 +86,8 @@ var OrderView = Marionette.ItemView.extend({
 			  xhr.open("GET", 'http://api-adresse.data.gouv.fr/search/?q='+origin, false);
 			  xhr.send();
 			  var jsonified = JSON.parse(xhr.response);
+			  if (jsonified.features[0].geometry == undefined)
+			  	return ;
 			  var longitude = jsonified.features[0].geometry.coordinates[0];
 			  var latitude = jsonified.features[0].geometry.coordinates[1];
 			  if (step == 'from') {
