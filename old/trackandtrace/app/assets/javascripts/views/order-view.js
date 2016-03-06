@@ -9,16 +9,18 @@ var OrderView = Marionette.ItemView.extend({
 
 		ui: {
 			btnSubmit: "#btnSubmit"
+
 		},
 
 		events: {
 			'click @ui.btnSubmit': 'getResult'
+			'click @ui.sendfrom': 'initMap'
+			'click @ui.sendtoo': 'getResult'
+
 		},
 
 		getResult: function(e) {
 		   this.trigger('getResult', e);
-		   console.log('Test\n');
-		   initMap();
 		}
 	});
 
