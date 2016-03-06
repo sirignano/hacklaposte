@@ -28,10 +28,15 @@ a.numero_de_suivi = "lol"
 b = Valise.where("numero_de_suivi == lol")
 a = Valise.all
 
-a = Valise.new
-a.state = 1
 a.numero_de_suivi = der :text => "{err1}" and return
 a.numero_de_suivi = d"6A08223127191"
 a.numero_de_suivi = d6A08223127191"
 a.numero_de_suivi = "6A08223127191"
+Valise.where("numero_de_suivi = '6A08223127191'")
+a = Valise.new
+a.state = 1
+a.numero_de_suivi = "1"
 a.save
+Valise.where("numero_de_suivi = '1'")
+Valise.where("numero_de_suivi = 'lol'")
+Valise
