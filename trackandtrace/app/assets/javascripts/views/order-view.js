@@ -70,7 +70,7 @@ var OrderView = Marionette.ItemView.extend({
 			  else if (step == 'to') {
 			    this.toCoord.longitude = longitude;
 			    this.toCoord.latitude = latitude;
-			    var this.string = 'Retirer mon colis ici !';
+			    this.string = 'Retirer mon colis ici !';
 			  }
 			  else
 			  	this.string = '';
