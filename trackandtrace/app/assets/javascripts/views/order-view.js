@@ -32,10 +32,12 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		fromRelais: function(e) {
+			console.log(0);
 			self = this;
 			this.infowindow.close();
 		},
 		toRelais: function(e) {
+			console.log(1);
 			self = this;
 			this.infowindow.close();
 		},
