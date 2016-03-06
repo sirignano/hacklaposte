@@ -27,21 +27,22 @@ var createMarker = function (info){
 
 }
 function initMap(origin) {
-  console.log(origin);
+  if (origin == null || origin == '')
+    return ;
   var xhr = new XMLHttpRequest();
   xhr.open("GET", 'http://api-adresse.data.gouv.fr/search/?q='+origin, false);
   xhr.send();
   jsonified = JSON.parse(xhr.response);
   longitude = jsonified.features[0].geometry.coordinates[0];
   latitude = jsonified.features[0].geometry.coordinates[1];
-  if (step == 'from') {
-    from_coords['lng'] = longitude;
-    from_coords['lat'] = latitude;
-  }
-  else if (step == 'to') {
-    to_coords['lng'] = longitude;
-    to_coords['lat'] = latitude;
-  }
+  // if (step == 'from') {
+  //   from_coords['lng'] = longitude;
+  //   from_coords['lat'] = latitude;
+  // }
+  // else if (step == 'to') {
+  //   to_coords['lng'] = longitude;
+  //   to_coords['lat'] = latitude;
+  // }
   var mapDiv = document.getElementById('map');
   map = new google.maps.Map(mapDiv, {
     center: {lat: latitude, lng: longitude},
