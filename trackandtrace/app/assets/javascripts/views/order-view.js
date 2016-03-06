@@ -29,7 +29,6 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		sendFrom: function(e) {
-			console.log('lol');
 			this.initMap(document.getElementById('depart').value, 'from');
 		},
 
