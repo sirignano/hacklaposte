@@ -9,7 +9,8 @@ var Post1BaggageRouter = Marionette.AppRouter.extend({
 		'order': 'showOrder',
 		'tracking': 'showTracking',
 		'deliver': 'showCheck',
-		'result': 'showResult'
+		'result': 'showResult',
+		'price': 'showPrice'
 	},
 
 	initialize: function(options) {

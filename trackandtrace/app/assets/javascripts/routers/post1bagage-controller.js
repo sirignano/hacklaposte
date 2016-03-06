@@ -6,6 +6,7 @@ var OrderView = require('../views/order-view');
 var TrackingCompositeView = require('../views/tracking-composite-view');
 var CheckView = require('../views/check-view');
 var ResultView = require('../views/result-view');
+var PriceView = require('../views/price-view');
 
 var Post1BaggageController = Marionette.Object.extend({
 	initialize: function(options) {
@@ -36,8 +37,12 @@ var Post1BaggageController = Marionette.Object.extend({
 	},
 
 	showResult: function() {
-		console.log('showResult');
 		this.rootLayout.showChildView('app', new ResultView());	
+	},
+
+	showPrice: function() {
+		console.log('showPrice');
+		this.rootLayout.showChildView('app', new PriceView());	
 	}
 });
 

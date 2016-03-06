@@ -205,3 +205,71 @@ html{
 	padding-right: 15px;
 }
 
+/*PRICE*/
+.price-container{
+	padding-top: 25px;
+	/*background-color: #edf0f5;*/
+	background-image: url(../images/bg-home.jpg);
+	background-position: center;
+
+}
+
+.final-price{
+	position: relative;
+	margin-left: 25vw;
+	width: 50vw;
+	height: 50vw;
+	border: 4px;
+	border: 5px solid #286090;
+	border-radius: 50%;
+	margin-top: 10vh;
+	background-color: #c3daef;
+	text-align: center;
+	color: #286090;
+	margin-bottom: 10vh;
+}
+
+.absolute-price{
+	position: absolute;
+	top: 9vw;
+	left: 15vw;
+}
+
+.options-menu{
+	margin-top: 3vh;
+}
+
+.lib-price{
+	font-size: 1.3em;
+}
+
+.value-price, .currency{
+	font-size: 3em;
+}
+
+.tab1{
+	border: 1px solid black;
+	margin: 5vw;
+	background-color: transparent !important;
+	border: 0;
+}
+
+.option-lib{
+	padding: 10vw;
+}
+
+.option-label{
+	margin-left: 10px;
+}
+
+.option-title{
+	display: flex;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#submit-price{
+	margin-top: 5vh;
+	margin-left: 35%;
+}
+
