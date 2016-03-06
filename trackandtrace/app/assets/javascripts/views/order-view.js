@@ -27,17 +27,19 @@ var OrderView = Marionette.ItemView.extend({
 		sendTo: function(e) {
 			this.initMap(document.getElementById('arrivee').value, 'to');
 		},
+
 		sendFrom: function(e) {
 			this.initMap(document.getElementById('depart').value, 'from');
 		},
 
 		fromRelais: function(e) {
-			console.log(0);
+			console.log('0');
 			self = this;
 			this.infowindow.close();
 		},
+
 		toRelais: function(e) {
-			console.log(1);
+			console.log('1');
 			self = this;
 			this.infowindow.close();
 		},
