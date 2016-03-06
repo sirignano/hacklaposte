@@ -21,7 +21,7 @@ var OrderView = Marionette.ItemView.extend({
 
 		sendFrom: function(e) {
 			initMap();
-		}
+		},
 
 		getResult: function(e) {
 		   this.trigger('getResult', e);
