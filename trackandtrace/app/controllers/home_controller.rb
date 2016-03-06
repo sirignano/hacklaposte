@@ -26,15 +26,16 @@ class HomeController < ApplicationController
 				'last_ping': '"+b.last_ping.to_s+"',
 				'depot_date': '"+b.depot_date.to_s+"',
 				'retrait_date': '"+b.retrait_date.to_s+"',
-				'final_address_coord': '"+b.final_address_coord+"',
-				'start_address_coord': '"+b.start_address_coord+"',
-				'first_relai_addr': '"+b.first_relai_addr+"',
-				'final_relai_addr': '"+b.final_relai_addr+"',
-				'first_relai_coord': '"+b.first_relai_coord+"',
-				'final_relai_coord': '"+b.final_relai_coord+"',
+
 
 				}]" and return
 			end
+				# 'final_address_coord': '"+b.final_address_coord+"',
+				# 'start_address_coord': '"+b.start_address_coord+"',
+				# 'first_relai_addr': '"+b.first_relai_addr+"',
+				# 'final_relai_addr': '"+b.final_relai_addr+"',
+				# 'first_relai_coord': '"+b.first_relai_coord+"',
+				# 'final_relai_coord': '"+b.final_relai_coord+"',
   end
   def new
   	a = Valise.new
