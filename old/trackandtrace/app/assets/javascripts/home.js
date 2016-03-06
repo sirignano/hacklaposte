@@ -22,6 +22,7 @@ var createMarker = function (info){
 
   console.log(infowindow);
   google.maps.event.addListener(marker, 'click', function(){
+      infoWindow.setContent('<h2>' + marker.city + '</h2>' + marker.desc);
       infowindow.open(map, marker);
   });
 
@@ -47,7 +48,7 @@ function initMap(step) {
     zoom: 12
   });
   infowindow = new google.maps.InfoWindow({
-    content: 'tmpcontent'
+    content: '<h2>' + marker.title + '</h2>' + marker.content
   });
   console.log(infowindow);
   xhr.open("GET", 'https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=' + latitude + ',' + longitude + ',5000', false);
@@ -57,7 +58,7 @@ function initMap(step) {
       tmp1 = res[ids].fields.latitude - latitude;
       tmp2 = res[ids].fields.longitude - longitude;
       dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
-      tmp = {id: res[ids].fields.libelle_du_site.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist};
+      tmp = {id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist};
       arrcities.push(tmp);
       createMarker(tmp);
   }
