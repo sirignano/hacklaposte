@@ -17,12 +17,16 @@ var OrderView = Marionette.ItemView.extend({
 		events: {
 			'click @ui.btnSubmit': 'getResult',
 			'click @ui.sendfrom': 'sendFrom',
-			'click @ui.sendtoo': 'getResult'
+			'click @ui.sendtoo': 'sendTo'
 
 		},
 
+
+		sendTo: function(e) {
+			initMap($('#arrivee').value);
+		},
 		sendFrom: function(e) {
-			initMap();
+			initMap($('#depart').value);
 		},
 
 		getResult: function(e) {
