@@ -26,8 +26,8 @@ class HomeController < ApplicationController
 	# a.first_relai_coord = params[:first_relai_coord]
 	# a.final_relai_coord = params[:final_relai_coord]
 	a.numero_de_suivi = "6A08223127191"# a determiner et a renvoyer
-	a.last_ping = Datetime.current
-	a.depot_date = Datetime.current
+	a.last_ping = DateTime.current
+	a.depot_date = DateTime.current
 	a.retrait_date = DateTime.parse("#{params[:endDate]} #{params[:endTime]}:00.000000").to_i
 	a.save
 	redirect_to :back and return
