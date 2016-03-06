@@ -1,33 +1,57 @@
-<div class="row">
-  <div class="col-xs-12">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Départ...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-xs-12 -->
-</div><!-- /.row -->
-<div class="row">
-  <div class="col-xs-12">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Arrivée...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-xs-12 -->
-</div><!-- /.row -->
-<div class="row">
-  <div class="col-xs-12">
-    <div class="form-group">
-      <input type="number" name="quantity" min="1" max="5" value="0">
-      <i class="fa fa-suitcase fa-2x"></i>&nbsp;
-      <input type="number" name="quantity" min="1" max="5" value="0">
-      <i class="fa fa-suitcase fa-3x"></i>&nbsp;
-      <input type="number" name="quantity" min="1" max="5" value="0">
-      <i class="fa fa-suitcase fa-4x"></i>
+<div class="order">
+  <div class="row">
+    <div class="col-xs-9">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Départ...">
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group">
+        <input class="btn btn-primary" type="button" value="Choisir">
+      </div>
+    </div>
+  </div><!-- /.row -->
+  <div class="row">
+    <div class="col-xs-9">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Arrivée...">
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group">
+        <input class="btn btn-primary" type="button" value="Choisir">
+      </div>
+    </div>
+  </div><!-- /.row -->
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <input type="date" class="form-control" name="startDate">
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <input type="time" class="form-control" name="startTime">
+      </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <div class="form-group">
-      <input class="btn btn-default pull-right" type="submit" value="Commander">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <div class="form-group">
+        <input type="number" name="quantity" min="1" max="5" value="0">
+        <i class="fa fa-suitcase fa"></i>&nbsp;
+        <input type="number" name="quantity" min="1" max="5" value="0">
+        <i class="fa fa-suitcase fa-2x"></i>&nbsp;
+        <input type="number" name="quantity" min="1" max="5" value="0">
+        <i class="fa fa-suitcase fa-3x"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <div class="form-group">
+        <input class="btn btn-primary btn-lg" type="submit" value="Réserver" id="btnSubmit">
+      </div>
     </div>
   </div>
 </div>
