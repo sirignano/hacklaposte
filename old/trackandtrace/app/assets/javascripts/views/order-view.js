@@ -13,8 +13,8 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		events: {
-			'click @ui.btnSubmit': 'getResult'
-			'click @ui.sendfrom': 'sendFrom'
+			'click @ui.btnSubmit': 'getResult',
+			'click @ui.sendfrom': 'sendFrom',
 			'click @ui.sendtoo': 'getResult'
 
 		},
