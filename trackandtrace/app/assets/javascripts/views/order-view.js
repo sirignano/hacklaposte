@@ -105,7 +105,9 @@ var OrderView = Marionette.ItemView.extend({
 			  var mapDiv = document.getElementById('map');
 			  this.map = new google.maps.Map(mapDiv, {
 			    center: {lat: latitude, lng: longitude},
-			    zoom: 12
+			    zoom: 12,
+			    mapTypeId: google.maps.MapTypeId.ROADMAP,
+	            disableDefaultUI: true
 			  });
 			  this.infowindow = new google.maps.InfoWindow({
 			    content: ''
