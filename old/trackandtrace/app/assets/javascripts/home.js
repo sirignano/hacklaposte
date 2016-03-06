@@ -47,4 +47,3 @@ for (var ids in res) {
 }
 console.log(arrcities);
 }
-initMap();
