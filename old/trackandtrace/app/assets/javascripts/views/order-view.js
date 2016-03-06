@@ -17,6 +17,7 @@ var OrderView = Marionette.ItemView.extend({
 
 		getResult: function(e) {
 		   this.trigger('getResult', e);
+		   console.log('Test\n');
 		   initMap();
 		}
 	});
