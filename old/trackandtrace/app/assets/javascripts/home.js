@@ -44,6 +44,9 @@ function initMap(step) {
     center: {lat: latitude, lng: longitude},
     zoom: 12
   });
+  var infowindow = new google.maps.InfoWindow({
+    content: 'tmpcontent'
+  });
   xhr.open("GET", 'https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=' + latitude + ',' + longitude + ',5000', false);
   xhr.send();
   res = JSON.parse(xhr.response).records;
