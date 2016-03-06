@@ -64,7 +64,7 @@ var OrderView = Marionette.ItemView.extend({
 			  marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
 			  google.maps.event.addListener(marker, 'click', function(){
-			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc + '<input class="btn btn-primary" type="button" value="' + string + '" id="' + id + '">');
+			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc + '<input class="btn btn-primary" type="button" id="' + id + '" value="' + string + '">');
 			      self.infowindow.open(self.map, marker);
 			  });
 
