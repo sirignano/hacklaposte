@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   end
 
   def suivi
-			a = Valise.where("numero_de_suivi == #{params[:str]}")
+			a = Valise.find_by! numero_de_suivi: params[:str]
 			if a.empty?
 				render :text => "{err1}" and return
 			else
