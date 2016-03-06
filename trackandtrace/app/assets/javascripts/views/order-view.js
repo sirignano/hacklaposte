@@ -37,7 +37,7 @@ var OrderView = Marionette.ItemView.extend({
 			// function initMap
 		},
 
-		createMarker: function(info, string) {
+		createMarker: function(info, string, id) {
 			var self = this;
 			  var marker = new google.maps.Marker({
 			      map: self.map,
@@ -47,7 +47,7 @@ var OrderView = Marionette.ItemView.extend({
 			  marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
 			  google.maps.event.addListener(marker, 'click', function(){
-			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc + '<input class="btn btn-primary" type="button" value="' + string + '" id="sendfrom">');
+			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc + '<input class="btn btn-primary" type="button" value="' + string + '" id="' + id + '">');
 			      self.infowindow.open(self.map, marker);
 			  });
 
@@ -66,11 +66,13 @@ var OrderView = Marionette.ItemView.extend({
 			    this.fromLongitude = longitude;
 			    this.fromLatitude = latitude;
 			    this.string = 'Deposer mon colis ici !';
+			    this.id = 'fromrelais'
 			  }
 			  else if (step == 'to') {
 			    this.toLongitude = longitude;
 			    this.toLatitude = latitude;
 			    this.string = 'Retirer mon colis ici !';
+			    this.id = 'torelais'
 			  }
 			  console.log(this.string);
 			  var mapDiv = document.getElementById('map');
@@ -89,7 +91,7 @@ var OrderView = Marionette.ItemView.extend({
 			      var tmp1 = res[ids].fields.latitude - latitude;
 			      var tmp2 = res[ids].fields.longitude - longitude;
 			      var dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
-			      this.createMarker({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist}, this.string);
+			      this.createMarker({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist}, this.string, this.id);
 			  }
 			}
 
