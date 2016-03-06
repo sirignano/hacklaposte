@@ -35,13 +35,10 @@ var Post1BaggageRouter = require('./routers/post1bagage-router');
 (function($) {
 
 	$(function() {
-		console.log('app start');
 		var app = new Marionette.Application({
 			onStart: function(options) {
-				console.log('onStart');
 				var router = new Post1BaggageRouter(options);
 
-				console.log('history start');
 				Backbone.history.start();
 			}
 		});
