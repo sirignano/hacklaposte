@@ -59,16 +59,16 @@ var OrderView = Marionette.ItemView.extend({
 			  var xhr = new XMLHttpRequest();
 			  xhr.open("GET", 'http://api-adresse.data.gouv.fr/search/?q='+origin, false);
 			  xhr.send();
-			  jsonified = JSON.parse(xhr.response);
-			  longitude = jsonified.features[0].geometry.coordinates[0];
-			  latitude = jsonified.features[0].geometry.coordinates[1];
+			  var jsonified = JSON.parse(xhr.response);
+			  var longitude = jsonified.features[0].geometry.coordinates[0];
+			  var latitude = jsonified.features[0].geometry.coordinates[1];
 			  if (step == 'from') {
-			    truc = longitude;
-			    bidule = latitude;
+			    // truc = longitude;
+			    // bidule = latitude;
 			  }
 			  else if (step == 'to') {
-			    truc = longitude;
-			    bidule = latitude;
+			    // truc = longitude;
+			    // bidule = latitude;
 			  }
 			  var mapDiv = document.getElementById('map');
 			  this.map = new google.maps.Map(mapDiv, {
@@ -80,14 +80,12 @@ var OrderView = Marionette.ItemView.extend({
 			  });
 			  xhr.open("GET", 'https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=' + latitude + ',' + longitude + ',5000', false);
 			  xhr.send();
-			  res = JSON.parse(xhr.response).records;
+			  var res = JSON.parse(xhr.response).records;
 			  for (var ids in res) {
-			      tmp1 = res[ids].fields.latitude - latitude;
-			      tmp2 = res[ids].fields.longitude - longitude;
-			      dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
-			      tmp = {id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist};
-			      // arrcities.push(tmp);
-			      this.createMarker(tmp);
+			      var tmp1 = res[ids].fields.latitude - latitude;
+			      var tmp2 = res[ids].fields.longitude - longitude;
+			      var dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
+			      this.createMarker({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
 			  }
 			}
 
