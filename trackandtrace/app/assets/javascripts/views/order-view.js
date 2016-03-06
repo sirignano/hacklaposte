@@ -63,13 +63,13 @@ var OrderView = Marionette.ItemView.extend({
 			  var longitude = jsonified.features[0].geometry.coordinates[0];
 			  var latitude = jsonified.features[0].geometry.coordinates[1];
 			  if (step == 'from') {
-			    this.fromCoord.longitude = longitude;
-			    this.fromCoord.latitude = latitude;
+			    this.fromLongitude = longitude;
+			    this.fromLatitude = latitude;
 			    this.string = 'Deposer mon colis ici !';
 			  }
 			  else if (step == 'to') {
-			    this.toCoord.longitude = longitude;
-			    this.toCoord.latitude = latitude;
+			    this.toLongitude = longitude;
+			    this.toLatitude = latitude;
 			    this.string = 'Retirer mon colis ici !';
 			  }
 			  console.log(this.string);
