@@ -39,7 +39,8 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		toRelais: function(e) {
-			console.log(e);
+			console.log(e.currentTarget);
+			console.log(e.currentTarget.value);
 			// array = 
 			self = this;
 			this.infowindow.close();
@@ -65,7 +66,7 @@ var OrderView = Marionette.ItemView.extend({
 			  marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
 			  google.maps.event.addListener(marker, 'click', function(){
-			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc + '<input class="btn btn-primary" type="button" onclick="document.getElementById(\'' + id + '\').value=\'' + info.lat + ';' + info.lon + ';' + info.city + '\';document.getElementById(\'' + id + '\').click()" value="' + string + '">');
+			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc + '<input class="btn btn-primary" type="button" onclick="document.getElementById(\'' + id + '\').value=\'' + info.lat + ';' + info.long + ';' + info.city + '\';document.getElementById(\'' + id + '\').click()" value="' + string + '">');
 			      self.infowindow.open(self.map, marker);
 			  });
 
