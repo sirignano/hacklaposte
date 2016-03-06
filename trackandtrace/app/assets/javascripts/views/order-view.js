@@ -8,11 +8,25 @@ var OrderView = Marionette.ItemView.extend({
 		template: tpl, 
 
 		ui: {
-			btnSubmit: "#btnSubmit"
+			btnSubmit: "#btnSubmit",
+			sendfrom: "#sendfrom",
+			sendtoo: "#sendtoo"
+
 		},
 
 		events: {
-			'click @ui.btnSubmit': 'getResult'
+			'click @ui.btnSubmit': 'getResult',
+			'click @ui.sendfrom': 'sendFrom',
+			'click @ui.sendtoo': 'sendTo'
+
+		},
+
+
+		sendTo: function(e) {
+			initMap($('#arrivee').value);
+		},
+		sendFrom: function(e) {
+			initMap($('#depart').value);
 		},
 
 		getResult: function(e) {
