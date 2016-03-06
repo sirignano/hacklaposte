@@ -21,10 +21,7 @@ var OrderView = Marionette.ItemView.extend({
 			'click @ui.sendfrom': 'sendFrom',
 			'click @ui.sendto': 'sendTo',
 			'click @ui.fromrelais': 'fromRelais',
-			'click @ui.torelais': 'toRelais',
-			'click #start-place' : 'showStartPlace',
-			'click #end-place' : 'showEndPlace',
-			'click #submit-btn' : 'submitUserInfo'
+			'click @ui.torelais': 'toRelais'
 		},
 
 		sendTo: function(e) {
@@ -60,6 +57,7 @@ var OrderView = Marionette.ItemView.extend({
 		getResult: function(e) {
 			console.log(document.getElementById('fromRecapAddr'));
 		   this.trigger('getResult', e);
+		   submitUserInfo();
 		},
 
 		initialize: function(){
