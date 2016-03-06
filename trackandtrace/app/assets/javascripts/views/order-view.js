@@ -91,7 +91,6 @@ var OrderView = Marionette.ItemView.extend({
 			    this.string = 'Retirer mon colis ici !';
 			    this.id = 'torelais';
 			  }
-			  console.log(this.string);
 			  var mapDiv = document.getElementById('map');
 			  this.map = new google.maps.Map(mapDiv, {
 			    center: {lat: latitude, lng: longitude},
@@ -100,7 +99,6 @@ var OrderView = Marionette.ItemView.extend({
 			  this.infowindow = new google.maps.InfoWindow({
 			    content: ''
 			  });
-			  console.log(this.infowindow);
 			  xhr.open("GET", 'https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=' + latitude + ',' + longitude + ',5000', false);
 			  xhr.send();
 			  var res = JSON.parse(xhr.response).records;
