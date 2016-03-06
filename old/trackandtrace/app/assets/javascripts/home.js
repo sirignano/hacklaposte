@@ -20,7 +20,6 @@ var createMarker = function (info){
   });
   marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
-  console.log(infowindow);
   google.maps.event.addListener(marker, 'click', function(){
       infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc);
       infowindow.open(map, marker);
@@ -45,12 +44,11 @@ function initMap(step) {
   var mapDiv = document.getElementById('map');
   map = new google.maps.Map(mapDiv, {
     center: {lat: latitude, lng: longitude},
-    zoom: 12
+    zoom: 15
   });
   infowindow = new google.maps.InfoWindow({
     content: ''
   });
-  console.log(infowindow);
   xhr.open("GET", 'https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=' + latitude + ',' + longitude + ',5000', false);
   xhr.send();
   res = JSON.parse(xhr.response).records;
