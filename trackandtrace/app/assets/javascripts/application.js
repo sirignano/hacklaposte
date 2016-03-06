@@ -13,9 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require angular
-//= require angular-animate
-//= require angular-resource
 //= require turbolinks
 //= require underscore
 //= require backbone
@@ -23,11 +20,6 @@
 //= require backbone.marionette
 //= require handlebars.runtime
 //= require handlebars
-//= require react
-//= require react_ujs
-//= require components
-//= require underscore
-//= require backbone
 //= require trackandtrace
 //= require_tree ../templates
 //= require_tree ./models
