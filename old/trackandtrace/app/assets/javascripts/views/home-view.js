@@ -1,10 +1,12 @@
+
 'use strict'
 
 //TEMPLATE
+var tpl = require('../../templates/home.hbs');
 
 var HomeView = Marionette.ItemView.extend({
 		//el: '#tweet-container',
-		template: require('../../templates/home.hbs')
+		template: tpl
 	});
 
 module.exports = HomeView;

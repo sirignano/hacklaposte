@@ -1,18 +1,9 @@
-<div class="row">
-  <div class="col-xs-6">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Search for...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-xs-6 -->
-  <div class="col-xs-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-xs-6 -->
-</div><!-- /.row -->
+<div class="tracking-item">
+  {{#if step}}
+  	<div class="tracking-column"></div>
+  {{/if}}
+	<div class="tracking-bullet track-{{status}}"></div>
+	<div class="tracking-info">
+    <span class="tracking-label">{{desc}}</span>
+	</div>
+</div>

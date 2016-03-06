@@ -33,11 +33,7 @@ body {
 	margin:0 !important;
 }
 
-.starter-template {
-	padding: 40px 15px;
-  text-align: center;
-}
-
+/*HOME*/
 .home-container{
 	background-image: url(../images/bg-home.jpg);
 	background-position: center;
@@ -49,14 +45,20 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 30vh;
-	margin-left: 15vw;
+	margin-top: 25vh;
+	margin-left: 10vw;
 	height:35vh;
-	width: 60vw;
+	line-height: 17.5vh;
+	width: 80vw;
+
+	text-align: center;
+	vertical-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
 .btn-line1{
-	height: 20vh;
+	height: 25vh;
 }
 
 .btn-line2{
@@ -66,14 +68,119 @@ body {
 
 .round-btn{
 	display: inline-block;
-	width: 12.5vh;
-	height: 12.5vh;
+	width: 20vh;
+	height: 20vh;
 	border-radius: 50%;
-	background-color: black;
 	margin-top: 2.5vh;
-	vertical-align:middle;	
+	vertical-align:middle;
+	border: 5px solid white;
+	background-color: #282828;
+	opacity: 0.8;
+
+}
+
+.btn-cmd{
+	color: white;
+	border: 5px solid #FDAAAD;
 }
 
 .btn-check{
 	margin-left: 7vw;
+	color: white;
+	border: 5px solid #FCDE6C;
+}
+
+.btn-follow{
+	color: white;
+	border: 5px solid #CDB3D3;
+}
+
+/*ORDER*/
+.order {
+	padding: 40px 15px;
+}
+
+/*TRACKING*/
+.composite-container{
+	padding-top: 25px;
+}
+
+.tracking-list{
+	width:calc(90vw - 100px);
+	margin-left: 100px;
+}
+
+.tracking-bullet{
+	position: absolute;
+	left: 40px;
+	width: 5vh;
+	height: 5vh;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+
+.track-true{
+	background-color: green;
+  background: -webkit-radial-gradient(40px 40px, circle, white, green);
+  background: -moz-radial-gradient(40px 40px, circle, white, green);
+  background: radial-gradient(40px 40px, circle, white, green);		
+}
+
+.track-false{
+	background-color: red;
+	background: -webkit-radial-gradient(40px 40px, circle, white, red);
+  background: -moz-radial-gradient(40px 40px, circle, white, red);
+  background: radial-gradient(40px 40px, circle, white, red);	
+}
+
+.tracking-info{
+	display: flex;
+	border: 2px solid #8080ff;
+	height: 10vh;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.tracking-label{
+	margin: auto;
+	margin-left: 20px;
+	text-overflow: ellipsis;
+}
+
+.tracking-column{
+	position: absolute;
+	left: calc(40px + 2.5vh);
+	height: 15vh;
+	width: 2px;
+	background-color: black;
+}
+
+.tracking-location{
+	position: relative;
+	border: 2px solid #8080ff;
+	border-radius: 20px;
+	margin: 20px;
+}
+
+.tracking-title{
+	line-height: 30px;
+}
+
+.tracking-place{
+	line-height: 30px;
+	padding-left: 40px;
+	text-align: center;
+}
+
+.arrow-place{
+	position: absolute;
+	left: -20px;
+	font-size: 2em;
+	color:#8080ff;
+	padding: 5px;
+	background-color: white;
+}
+
+.check-container{
+	padding-top: 50px;
 }
