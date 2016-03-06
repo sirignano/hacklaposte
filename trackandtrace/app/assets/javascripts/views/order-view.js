@@ -83,11 +83,8 @@ var OrderView = Marionette.ItemView.extend({
 			},
 
 		initMap: function(origin, step) {
-			  console.log('debug1');
-
 			  if (origin == null || origin == '')
 			    return ;
-			  console.log('debug2');
 			  var xhr = new XMLHttpRequest();
 			  xhr.open("GET", 'http://api-adresse.data.gouv.fr/search/?q='+origin, false);
 			  xhr.send();
