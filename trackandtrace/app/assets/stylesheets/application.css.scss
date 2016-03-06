@@ -107,8 +107,11 @@ html{
 
 /*TRACKING*/
 .composite-container{
-	padding-top: 25px;
-	background-color: #edf0f5;
+	padding-top: 30px;
+	background-image: url(../images/eiffel.jpg);
+	background-position: center;
+	height: 100vh;
+	z-index: 1;
 }
 
 .tracking-list{
@@ -151,6 +154,9 @@ html{
 	height: 10vh;
 	border-radius: 10px;
 	margin-bottom: 20px;
+	background-color: #282828;
+	opacity: 0.8;
+	color:white;
 }
 
 .tracking-label{
@@ -165,7 +171,7 @@ html{
 	left: calc(40px + 2.5vh);
 	height: 15vh;
 	width: 2px;
-	background-color: black;
+	background-color: #4d4d4d;
 }
 
 .tracking-location{
@@ -173,10 +179,15 @@ html{
 	border: 2px solid #8080ff;
 	border-radius: 20px;
 	margin: 20px;
+	background-color: #282828;
+	opacity: 0.8;
+	color:white;
+	height: 60px;
 }
 
 .tracking-title{
-	line-height: 30px;
+	padding-left: 40px;
+	line-height: 50px;
 }
 
 .tracking-place{
