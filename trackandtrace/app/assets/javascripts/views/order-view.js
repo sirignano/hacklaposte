@@ -37,7 +37,7 @@ var OrderView = Marionette.ItemView.extend({
 			// function initMap
 		},
 
-		createMarker: function(info) {
+		createMarker: function(info, string) {
 			var self = this;
 			  var marker = new google.maps.Marker({
 			      map: self.map,
@@ -47,7 +47,7 @@ var OrderView = Marionette.ItemView.extend({
 			  marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
 			  google.maps.event.addListener(marker, 'click', function(){
-			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc);
+			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc + '<input class="btn btn-primary" type="button" value=' + string + 'id="sendfrom">');
 			      self.infowindow.open(self.map, marker);
 			  });
 
@@ -65,13 +65,17 @@ var OrderView = Marionette.ItemView.extend({
 			  if (step == 'from') {
 			    this.fromCoord.longitude = longitude;
 			    this.fromCoord.latitude = latitude;
+			    var this.string = 'Deposer mon colis ici !';
 			  }
 			  else if (step == 'to') {
 			    this.toCoord.longitude = longitude;
 			    this.toCoord.latitude = latitude;
+			    var this.string = 'Retirer mon colis ici !';
 			  }
+			  else
+			  	this.string = '';
 			  var mapDiv = document.getElementById('map');
-			  this.map = new google.maps.Map(mapDiv, {
+			  var this.map = new google.maps.Map(mapDiv, {
 			    center: {lat: latitude, lng: longitude},
 			    zoom: 15
 			  });
@@ -86,7 +90,7 @@ var OrderView = Marionette.ItemView.extend({
 			      var tmp1 = res[ids].fields.latitude - latitude;
 			      var tmp2 = res[ids].fields.longitude - longitude;
 			      var dist = Math.sqrt(tmp1 * tmp1 + tmp2 * tmp2);
-			      this.createMarker({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist});
+			      this.createMarker({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist}, this.string);
 			  }
 			}
 
