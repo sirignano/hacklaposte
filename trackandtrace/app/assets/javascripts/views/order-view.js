@@ -75,7 +75,7 @@ var OrderView = Marionette.ItemView.extend({
 			  else
 			  	this.string = '';
 			  var mapDiv = document.getElementById('map');
-			  var this.map = new google.maps.Map(mapDiv, {
+			  this.map = new google.maps.Map(mapDiv, {
 			    center: {lat: latitude, lng: longitude},
 			    zoom: 15
 			  });
