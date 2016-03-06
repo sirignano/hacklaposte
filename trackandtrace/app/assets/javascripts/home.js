@@ -3,7 +3,7 @@
 
 //Data
 //Angular App Module and Controller
-origin = '41 rue Jussieu';
+/*// origin = '41 rue Jussieu';
 arrcities = [];
 var from_coords = {};
 var to_coords = {};
@@ -26,7 +26,7 @@ var createMarker = function (info){
   });
 
 }
-function initMap(origin) {
+function initMap(origin, step) {
   if (origin == null || origin == '')
     return ;
   var xhr = new XMLHttpRequest();
@@ -35,14 +35,14 @@ function initMap(origin) {
   jsonified = JSON.parse(xhr.response);
   longitude = jsonified.features[0].geometry.coordinates[0];
   latitude = jsonified.features[0].geometry.coordinates[1];
-  // if (step == 'from') {
-  //   from_coords['lng'] = longitude;
-  //   from_coords['lat'] = latitude;
-  // }
-  // else if (step == 'to') {
-  //   to_coords['lng'] = longitude;
-  //   to_coords['lat'] = latitude;
-  // }
+  if (step == 'from') {
+    truc = longitude;
+    bidule = latitude;
+  }
+  else if (step == 'to') {
+    truc = longitude;
+    bidule = latitude;
+  }
   var mapDiv = document.getElementById('map');
   map = new google.maps.Map(mapDiv, {
     center: {lat: latitude, lng: longitude},
@@ -62,4 +62,4 @@ function initMap(origin) {
       arrcities.push(tmp);
       createMarker(tmp);
   }
-}
+}*/
