@@ -83,13 +83,13 @@ var OrderView = Marionette.ItemView.extend({
 			    this.fromLongitude = longitude;
 			    this.fromLatitude = latitude;
 			    this.string = 'Deposer mon colis ici !';
-			    this.id = 'fromrelais'
+			    this.id = 'fromrelais';
 			  }
 			  else if (step == 'to') {
 			    this.toLongitude = longitude;
 			    this.toLatitude = latitude;
 			    this.string = 'Retirer mon colis ici !';
-			    this.id = 'torelais'
+			    this.id = 'torelais';
 			  }
 			  console.log(this.string);
 			  var mapDiv = document.getElementById('map');
