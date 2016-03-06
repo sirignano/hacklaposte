@@ -18,18 +18,18 @@ class HomeController < ApplicationController
 			if a.empty?
 				render :text => "{err1}" and return
 			else
-				str = "{"
+				str = "["
 				b = a.first
 				if b.state == 0
-					str += '{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}}'
+					str += '{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}]'
 				elsif b.state == 1
-					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}}'
+					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}]'
 				elsif b.state == 2
-					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}}'
+					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"},{"status": "false", "desc": "none"}]'
 				elsif b.state == 3
-					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"}}'
+					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "false", "desc": "none"}]'
 				elsif b.state == 4
-					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"}}'
+					str += '{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"},{"status": "true", "desc": "none"}]'
 				end
 				render :text => str and return
 			end
