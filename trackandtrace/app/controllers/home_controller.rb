@@ -25,7 +25,7 @@ class HomeController < ApplicationController
 				'numero_de_suivi': '"+b.numero_de_suivi+"',
 				'last_ping': '"+b.last_ping.to_s+"',
 				'depot_date': '"+b.depot_date.to_s+"',
-				'retrait_date': '"+b.retrait_date.to_s+"',
+				'retrait_date': '"+b.retrait_date.to_s+"'
 
 
 				}]" and return
