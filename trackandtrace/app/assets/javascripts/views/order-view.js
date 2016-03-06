@@ -78,6 +78,7 @@ var OrderView = Marionette.ItemView.extend({
 			  this.infowindow = new google.maps.InfoWindow({
 			    content: ''
 			  });
+			  console.log(this.infowindow);
 			  xhr.open("GET", 'https://datanova.laposte.fr/api/records/1.0/search/?dataset=laposte_poincont2&geofilter.distance=' + latitude + ',' + longitude + ',5000', false);
 			  xhr.send();
 			  var res = JSON.parse(xhr.response).records;
