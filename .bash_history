@@ -1,57 +1,3 @@
-git pull origin master
-git pull origin master
-git pull origin master
-git pull origin master
-git pull origin master
-git pull origin master
-git pull origin master
-ls
-mysql
-mkdir database
-cd database/
-apt-get install mysql-server mysql-client libmysqlclient15-dev mysql-common
-vi /etc/mysql/my.cnf
-mysql GroomAddict
-mysql root
-$ mysqld --skip-grant-tables
-mysql -u root mysql
-mysql -skip-grant-tables
-mysql
-apt-get install mysql-server
-mysql -u root -p
-mysql -u root -p
-mysql -u root -p
-ifconfig
-mysql -u root -p
-ifconfig
-ls
-ls
-ls && ls
-cd app/
-ls
-ps ax
-kill -9 15807
-node server.js 
-ls
-ls
-cd ..
-mkdir old
-mv trackandtrace* old/
-ls
-./push.sh 
-ls
-cd aa
-cd app/
-ls
-ls
-ls
-pwd
-ls
-find .
-ls
-ls
-cd ..
-ls
 cd app/
 node server.js 
 npm install passport
@@ -498,3 +444,57 @@ node server.js
 node server.js 
 node server.js 
 ls
+./push.sh 
+./pull.sh 
+rm old/trackandtrace/db/development.sqlite3 
+cd old/trackandtrace
+rake db:migrate
+history | grep rails
+rails s -p 80 -b 198.211.105.132 -d
+ps ax | grep rails
+kill -9 25390
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+./pull.sh 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+rm db/development.sqlite3 
+rake db:migrate
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+../../pull.sh 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+rails s -p 8080 -b 198.211.105.132 
+exit
