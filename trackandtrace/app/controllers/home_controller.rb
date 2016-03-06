@@ -13,7 +13,27 @@ class HomeController < ApplicationController
 			if a.empty?
 				render :text => "{err not found}" and return
 			else
-				render :text => b.to_json and return
+				b = a.first
+				render :text => "[{
+				'start_addr': '"+b.start_addr+"',
+				'final_addr': '"+b.final_addr+"',
+				'prix': '"+b.prix+"',
+				'nbr_petit': '"+b.nbr_petit+"',
+				'nbr_moyen': '"+b.nbr_moyen+"',
+				'nbr_gros': '"+b.nbr_gros+"',
+				'state': '"+b.state+"',
+				'numero_de_suivi': '"+b.numero_de_suivi+"',
+				'last_ping': '"+b.last_ping+"',
+				'depot_date': '"+b.depot_date+"',
+				'retrait_date': '"+b.retrait_date+"',
+				'final_address_coord': '"+b.final_address_coord+"',
+				'start_address_coord': '"+b.start_address_coord+"',
+				'first_relai_addr': '"+b.first_relai_addr+"',
+				'final_relai_addr': '"+b.final_relai_addr+"',
+				'first_relai_coord': '"+b.first_relai_coord+"',
+				'final_relai_coord': '"+b.final_relai_coord+"',
+
+				}]" and return
 			end
   end
   def new
