@@ -54,6 +54,7 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		getResult: function(e) {
+			console.log(document.getElementById('fromRecapAddr');
 		   this.trigger('getResult', e);
 		},
 
