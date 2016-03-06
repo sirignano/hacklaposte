@@ -38,17 +38,17 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		createMarker: function(info) {
-
+			var self = this;
 			  var marker = new google.maps.Marker({
-			      map: this.map,
+			      map: self.map,
 			      position: new google.maps.LatLng(info.lat, info.long),
 			      title: info.city
 			  });
 			  marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
 			  google.maps.event.addListener(marker, 'click', function(){
-			      this.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc);
-			      this.infowindow.open(this.map, marker);
+			      self.infowindow.setContent('<h2>' + info.city + '</h2>' + info.desc);
+			      self.infowindow.open(self.map, marker);
 			  });
 
 			},
