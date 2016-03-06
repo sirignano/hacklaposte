@@ -21,15 +21,15 @@ class HomeController < ApplicationController
 				str = "["
 				b = a.first
 				if b.state == 0
-					str += '{"status": "true", "desc": "adresse_de_depart"},{"status": "false", "desc": "ville"},{"status": "false", "desc": ""},{"status": "false", "desc": "ville"},{"status": "false", "desc": "adresse_de_arrive"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : adresse_de_depart"},{"status": "false", "desc": "Arrivée au centre de distribution de : ville"},{"status": "false", "desc": "En cours d\'acheminement"},{"status": "false", "desc": "Arrivée au centre de distribution de : ville"},{"status": "false", "desc": "On vous attend a : adresse_de_arrive =)"}]'
 				elsif b.state == 1
-					str += '{"status": "true", "desc": "adresse_de_depart"},{"status": "true", "desc": "ville"},{"status": "false", "desc": ""},{"status": "false", "desc": "ville"},{"status": "false", "desc": "adresse_de_arrive"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : adresse_de_depart"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville"},{"status": "false", "desc": "En cours d\'acheminement"},{"status": "false", "desc": "Arrivée au centre de distribution de : ville"},{"status": "false", "desc": "On vous attend a : adresse_de_arrive =)"}]'
 				elsif b.state == 2
-					str += '{"status": "true", "desc": "adresse_de_depart"},{"status": "true", "desc": "ville"},{"status": "true", "desc": ""},{"status": "false", "desc": "ville"},{"status": "false", "desc": "adresse_de_arrive"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : adresse_de_depart"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville"},{"status": "true", "desc": "En cours d\'acheminement"},{"status": "false", "desc": "Arrivée au centre de distribution de : ville"},{"status": "false", "desc": "On vous attend a : adresse_de_arrive =)"}]'
 				elsif b.state == 3
-					str += '{"status": "true", "desc": "adresse_de_depart"},{"status": "true", "desc": "ville"},{"status": "true", "desc": ""},{"status": "true", "desc": "ville"},{"status": "false", "desc": "adresse_de_arrive"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : adresse_de_depart"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville"},{"status": "true", "desc": "En cours d\'acheminement"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville"},{"status": "false", "desc": "On vous attend a : adresse_de_arrive =)"}]'
 				elsif b.state == 4
-					str += '{"status": "true", "desc": "adresse_de_depart"},{"status": "true", "desc": "ville"},{"status": "true", "desc": ""},{"status": "true", "desc": "ville"},{"status": "true", "desc": "adresse_de_arrive"}]'
+					str += '{"status": "true", "desc": "Pris en charge depuis : adresse_de_depart"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville"},{"status": "true", "desc": "En cours d\'acheminement"},{"status": "true", "desc": "Arrivée au centre de distribution de : ville"},{"status": "true", "desc": "On vous attend a : adresse_de_arrive =)"}]'
 				end
 				render :text => str and return
 			end
