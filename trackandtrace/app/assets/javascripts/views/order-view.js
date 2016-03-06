@@ -83,8 +83,11 @@ var OrderView = Marionette.ItemView.extend({
 			},
 
 		initMap: function(origin, step) {
+			  console.log('debug1');
+
 			  if (origin == null || origin == '')
 			    return ;
+			  console.log('debug2');
 			  var xhr = new XMLHttpRequest();
 			  xhr.open("GET", 'http://api-adresse.data.gouv.fr/search/?q='+origin, false);
 			  xhr.send();
@@ -125,13 +128,6 @@ var OrderView = Marionette.ItemView.extend({
 			      this.createMarker({id: res[ids].fields.identifiant_a, city: res[ids].fields.libelle_du_site, desc: res[ids].fields.adresse + " "  + res[ids].fields.code_postal + ", "  + res[ids].fields.localite, lat: res[ids].fields.latitude, long: res[ids].fields.longitude, dist: dist}, this.string, this.id);
 			  }
 			},
-					showStartPlace: function(){
-			console.log('showStartPlace');
-		},
-
-		showEndPlace: function(){
-			console.log('showStartPlace');
-		},
 
 		submitUserInfo: function(options){
 			this.model = new OrderModel({
