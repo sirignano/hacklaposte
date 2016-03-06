@@ -21,10 +21,10 @@ var OrderView = Marionette.ItemView.extend({
 		},
 
 		sendTo: function(e) {
-			this.initMap(document.getElementById('arrivee', 'to').value);
+			this.initMap(document.getElementById('arrivee').value, 'to');
 		},
 		sendFrom: function(e) {
-			this.initMap(document.getElementById('depart', 'from').value);
+			this.initMap(document.getElementById('depart').value, 'from');
 		},
 
 		getResult: function(e) {
