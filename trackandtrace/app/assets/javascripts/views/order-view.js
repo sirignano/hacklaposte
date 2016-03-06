@@ -127,6 +127,7 @@ var OrderView = Marionette.ItemView.extend({
 			},
 
 		submitUserInfo: function(options){
+			$('#map').hide();
 			this.model = new OrderModel({
 				startPlace: $('#depart').val(),
 				endPlace: $('#arrivee').val(),
