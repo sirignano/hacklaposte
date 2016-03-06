@@ -12,25 +12,26 @@ class HomeController < ApplicationController
   def new
   	a = Valise.new
 	a.mouvement = 0
+	a.start_addr = params[:startPlace]
+	a.final_addr = params[:endPlace]
 	a.prix = params[:prix]#prix a calculé
-	a.nbr_petit = params[:nbr_petit]
-	a.nbr_moyen = params[:nbr_moyen]
-	a.nbr_gros = params[:nbr_gros]
+	a.nbr_petit = params[:sSize].to_i
+	a.nbr_moyen = params[:lSize].to_i
+	a.nbr_gros = params[:xlSize].to_i
 	a.state = 0
-	a.final_address_coord = params[:final_address_coord]
-	a.start_address_coord = params[:start_address_coord]
-	a.start_addr = params[:start_addr]
-	a.final_addr = params[:final_addr]
-	a.first_relai_addr = params[:first_relai_addr]
-	a.final_relai_addr = params[:first_relai_addr]
-	a.first_relai_coord = params[:first_relai_coord]
-	a.final_relai_coord = params[:final_relai_coord]
+	# a.final_address_coord = params[:final_address_coord]
+	# a.start_address_coord = params[:start_address_coord]
+	# a.first_relai_addr = params[:first_relai_addr]
+	# a.final_relai_addr = params[:first_relai_addr]
+	# a.first_relai_coord = params[:first_relai_coord]
+	# a.final_relai_coord = params[:final_relai_coord]
 	a.numero_de_suivi = "6A08223127191"# a determiner et a renvoyer
 	a.last_ping = Datetime.current
 	a.depot_date = Datetime.current
-	a.retrait_date = params[:retrait_date]
+	a.retrait_date = DateTime.parse("#{params[:endDate]} #{params[:endTime]}:00.000000").to_i
 	a.save
 	redirect_to :back and return
+	#endDate endTime
   end
 
   def suivi
